@@ -1,0 +1,30 @@
+body {
+	background-color: #fff;
+	transition: background-color 1s ease-in-out;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.message {
+	background-color: rgba(255, 0, 0, 0.5);
+	padding: 20px;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+}
+
+.blue {
+	background-color: rgba(0, 0, 255, 0.5);
+}
+
+.light-blue {
+	background-color: rgba(0, 255, 255, 0.5);
+}
+
+.red {
+	background-color: rgba(255, 0, 0, 0.5);
+}

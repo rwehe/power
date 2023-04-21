@@ -1,0 +1,3 @@
+baseURL = 'https://power.ryanwehe.com/'
+languageCode = 'en-us'
+title = 'Current price of power'
