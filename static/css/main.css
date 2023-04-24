@@ -1,30 +1,40 @@
 body {
 	background-color: #fff;
 	transition: background-color 1s ease-in-out;
-}
-
-.container {
-	max-width: 600px;
+  }
+  
+  .container {
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 40px;
-}
-
-.message {
+  }
+  
+  .message {
 	background-color: rgba(255, 0, 0, 0.5);
 	padding: 20px;
 	color: #fff;
 	font-size: 18px;
 	text-align: center;
-}
-
-.blue {
+  }
+  
+  .blue {
 	background-color: rgba(0, 0, 255, 0.5);
-}
-
-.light-blue {
+  }
+  
+  .light-blue {
 	background-color: rgba(0, 255, 255, 0.5);
-}
-
-.red {
+  }
+  
+  .red {
 	background-color: rgba(255, 0, 0, 0.5);
-}
+  }
+  
+  /* Set the font size to be 5% of the viewport width */
+  h1, p {
+	font-size: 5vw;
+  }
+  
+  /* Reduce the font size of the last paragraph to 80% */
+  .container p:nth-last-child(-n+2) {
+	font-size: 90%;
+  }
