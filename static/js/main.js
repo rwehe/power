@@ -41,10 +41,25 @@ function getCurrentTimeOfUse(now){
   }
 
 function setPricingData() {
-    const currentSeason = getCurrentSeason(now);
-    const timeOfUse = getCurrentTimeOfUse(now);
-    const currentPrice = pricingData[currentSeason][timeOfUse].price;
-    return currentPrice;
+  const currentSeason = getCurrentSeason(now);
+  const timeOfUse = getCurrentTimeOfUse(now);
+  const currentPrice = pricingData[currentSeason][timeOfUse].price;
+
+  if (timeOfUse === 'Super Off-Peak'){
+    document.body.classList.add('on-peak');
+    document.body.classList.remove('super-off-peak');
+    document.body.classList.remove('off-peak');
+  } else if (timeOfUse === 'On-Peak'){
+    document.body.classList.add('on-peak');
+    document.body.classList.remove('super-off-peak');
+    document.body.classList.remove('off-peak');
+  } else {
+    document.body.classList.add('off-peak');
+    document.body.classList.remove('super-off-peak');
+    document.body.classList.remove('on-peak');
+  }
+
+  return currentPrice;
 }
 
 window.onload = setPricingData;
@@ -54,4 +69,3 @@ document.addEventListener('DOMContentLoaded', function() {
     const timeOfUse = getCurrentTimeOfUse(now);
     document.getElementById('timeofuse').innerHTML = timeOfUse;
   });
-  
