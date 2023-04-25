@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Power Price</title>
-	<link rel="stylesheet" href="/css/main.css">
-	<script src="/js/pricingdata.js"></script>
-	<script src="/js/main.js"></script>
+    <title>Power Price</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/pricingdata.js"></script>
+    <script src="/js/main.js"></script>
 </head>
 <body>
-	<div class="container">
-		<h1>Power Price</h1>
-		<p>The current price of power is: $<span id="current-price"></span> /kWh</p>
+    <div class="container">
+        <h1>Power Price</h1>
+        <p>The current price of power is: $<span id="current-price"></span> /kWh</p>
         <p>The current time of use is: <span id="timeofuse"></span></p>
         <p>Data is from: <a href="https://www.srpnet.com/price-plans/residential-electric/electric-vehicle">SRP Electric Vehicle Price Plan™</a></p>
         <p>Code for this website is available on <a href="https://github.com/rwehe/power">GitHub</a>.</p>
-	</div>
+    </div>
     <script>
         function refreshPage() {
             // Calculate the time until the next top of the hour
