@@ -1,5 +1,5 @@
 // Get the current date and time
-const now = new Date();
+const now = new Date(new Date().toLocaleString('en', {timeZone:'America/Phoenix'}));
 const currentDay = now.getDay();
 const currentHour = now.getHours();
 
