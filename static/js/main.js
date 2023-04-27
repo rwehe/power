@@ -46,7 +46,7 @@ function setPricingData() {
   const currentPrice = pricingData[currentSeason][timeOfUse].price;
 
   if (timeOfUse === 'Super Off-Peak'){
-    document.body.classList.add('super-on-peak');
+    document.body.classList.add('super-off-peak');
     document.body.classList.remove('on-peak');
     document.body.classList.remove('off-peak');
   } else if (timeOfUse === 'On-Peak'){
