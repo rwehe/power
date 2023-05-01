@@ -16,7 +16,7 @@ function getCurrentSeason(now) {
     }
 }
 
-function isWeekend(now){
+function getWeekendStatus(now){
   const currentDay = now.getDay();
   if (currentDay == 0 || currentDay == 6) {
     return true;
@@ -27,23 +27,18 @@ function isWeekend(now){
 function getCurrentTimeOfUse(now){
     const currentHour = now.getHours();
     const currentSeason = getCurrentSeason(now);
+    const isWeekend = getWeekendStatus(now);
     let timeOfUse = '';
     if (currentSeason === 'winter') {
-      if (currentHour >= 23 || currentHour < 5) {
-        timeOfUse = 'Super Off-Peak';
-      } else if ((currentHour >= 5 && currentHour < 9) || (currentHour >= 17 && currentHour < 21)) {
-        timeOfUse = 'On-Peak';
-      } else if ((currentHour >= 9 && currentHour < 17) || (currentHour >= 21 && currentHour < 23)) {
-        timeOfUse = 'Off-Peak';
-      }
-    } else { // Summer and Summer Peak use same on & off-peak times
-      if (currentHour >= 23 || currentHour < 5) {
-        timeOfUse = 'Super Off-Peak';
-      } else if (currentHour >= 14 && currentHour < 20) {
-        timeOfUse = 'On-Peak';
-      } else {
-        timeOfUse = 'Off-Peak';
-      }
+      if (currentHour >= 23 || currentHour < 5) {timeOfUse = 'Super Off-Peak';}
+      else if (((currentHour >= 5 && currentHour < 9) || (currentHour >= 17 && currentHour < 21)) && (isWeekend === false )) {timeOfUse = 'On-Peak';}
+      else if ((currentHour >= 9 && currentHour < 17) || (currentHour >= 21 && currentHour < 23)) {timeOfUse = 'Off-Peak';}
+      else{timeOfUse = 'Off-Peak';}
+    } 
+    else { // Summer and Summer Peak use same on & off-peak times
+      if (currentHour >= 23 || currentHour < 5) {timeOfUse = 'Super Off-Peak';}
+      else if (currentHour >= 14 && currentHour < 20 && isWeekend === false) {timeOfUse = 'On-Peak';}
+      else {timeOfUse = 'Off-Peak';}
     }
     return timeOfUse;
   }
