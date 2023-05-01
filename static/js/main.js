@@ -16,6 +16,14 @@ function getCurrentSeason(now) {
     }
 }
 
+function isWeekend(now){
+  const currentDay = now.getDay();
+  if (currentDay == 0 || currentDay == 6) {
+    return true;
+  }
+  return false;
+}
+
 function getCurrentTimeOfUse(now){
     const currentHour = now.getHours();
     const currentSeason = getCurrentSeason(now);
