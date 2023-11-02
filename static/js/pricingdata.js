@@ -1,35 +1,35 @@
 const pricingData = {
   "winter": {
     "On-Peak": {
-      "price": 0.1045,
+      "price": 0.1145,
     },
     "Off-Peak": {
-      "price": 0.0831,
+      "price": 0.0931,
     },
     "Super Off-Peak": {
-      "price": 0.0669,
+      "price": 0.0769,
     }
   },
   "summer": {
     "On-Peak": {
-      "price": 0.2170,
+      "price": 0.227,
     },
     "Off-Peak": {
-      "price": 0.0841,
+      "price": 0.0941,
     },
     "Super Off-Peak": {
-      "price": 0.0687,
+      "price": 0.0787,
     }
   },
   "summerpeak": {
     "On-Peak": {
-      "price": 0.2485,
+      "price": 0.2585,
     },
     "Off-Peak": {
-      "price": 0.0846,
+      "price": 0.0946,
     },
     "Super Off-Peak": {
-      "price": 0.069,
+      "price": 0.079,
     }
   },
 };
