@@ -2,9 +2,9 @@ body {
   background-color: #fff;
   font-family: "Avenir", sans-serif;
   text-align: center;
-	transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
-  
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -13,20 +13,20 @@ body {
 
 /* On-Peak */
 .on-peak {
-  background-color: rgb(255,187,187);
-  color: rgb(50,0,0);
+  background-color: rgb(255, 187, 187);
+  color: rgb(50, 0, 0);
 }
 
 /* Off-Peak */
 .off-peak {
-  background-color:rgb(130,255,132);
-  color: rgb(0,50,0);
+  background-color: rgb(130, 255, 132);
+  color: rgb(0, 50, 0);
 }
 
 /* Super Off-Peak */
 .super-off-peak {
-  background-color: rgb(119,146,255);
-  color: rgb(0,0,50);
+  background-color: rgb(119, 146, 255);
+  color: rgb(0, 0, 50);
 }
 
 h1 {
@@ -36,8 +36,8 @@ h1 {
 p {
   font-size: 3vw;
 }
-  
+
 /* Reduce the font size of the last paragraph to 80% */
-.container p:nth-last-child(-n+2) {
+.container p:nth-last-child(-n + 2) {
   font-size: 90%;
 }
